@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hima Varsha | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+Hima<span>Varsha</span>
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#certifications">Certificates</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="content">
+
+<h3>Hello, I'm</h3>
+
+<h1>Hima Varsha</h1>
+
+<h2><span id="typing"></span></h2>
+
+<p>
+Passionate Computer Science student dedicated to creating
+innovative software solutions and continuously learning
+new technologies.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn">Hire Me</a>
+
+<a href="resume.pdf" class="btn outline">Download Resume</a>
+
+</div>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fas fa-envelope"></i></a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="circle"></div>
+
+<img src="profile.png" alt="Profile">
+
+</div>
+
+</section>
+
+</header>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="about-box">
+
+<p>
+
+I'm a Computer Science Engineering student passionate about
+web development, programming and software engineering.
+
+I enjoy solving real-world problems through technology and
+continuously improving my technical skills.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skill-grid">
+
+<div class="card">Python</div>
+
+<div class="card">HTML5</div>
+
+<div class="card">CSS3</div>
+
+<div class="card">JavaScript</div>
+
+<div class="card">MySQL</div>
+
+<div class="card">Git</div>
+
+<div class="card">VS Code</div>
+
+<div class="card">Problem Solving</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="timeline">
+
+<div class="timeline-box">
+
+<h3>B.Tech (Computer Science)</h3>
+
+<p>Currently Pursuing</p>
+
+</div>
+
+<div class="timeline-box">
+
+<h3>Intermediate (MPC)</h3>
+
+<p>Completed</p>
+
+</div>
+
+<div class="timeline-box">
+
+<h3>SSC</h3>
+
+<p>Completed</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Smart Waste Management System</h3>
+
+<p>
+
+Developed a smart waste monitoring system with IoT
+to optimize garbage collection.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Password Generator</h3>
+
+<p>
+
+Built a secure password generator using Python with
+customizable options.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="cert-grid">
+
+<div>Python Programming</div>
+
+<div>HTML & CSS</div>
+
+<div>Java Programming</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Hima Varsha | Portfolio</p>
+
+</footer>
+
+<script>
+
+const words=["Python Developer",
+"Web Developer",
+"CSE Student",
+"Problem Solver"];
+
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+
+current=words[i];
+
+if(isDeleting){
+
+document.getElementById("typing").innerHTML=current.substring(0,j--);
+
+if(j<0){
+
+isDeleting=false;
+
+i=(i+1)%words.length;
+
+}
+
+}
+
+else{
+
+document.getElementById("typing").innerHTML=current.substring(0,j++);
+
+if(j>current.length){
+
+isDeleting=true;
+
+}
+
+}
+
+setTimeout(type,isDeleting?80:140);
+
+}
+
+type();
+
+</script>
+
+</body>
+
+</html>
